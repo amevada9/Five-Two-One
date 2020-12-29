@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Five Two One</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<!---Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Five Two One</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{% url 'five_two_one' %}"">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Totally Random</a>
+        <a class="nav-item nav-link" href="#">Play the Game</a>
+        <a class="nav-item nav-link" href="#">About us</a>
+      </div>
+    </div>
+  </nav>
+
+<body onload="choose()">
+    <div class="top">
+        <h2 style="color: darkorange ;text-align: center; padding-top: 50px;">Indecisive About where to eat tonight?</h2>
+        <h4 style="text-align: center;"> Here is a quick way to find out where to eat today</h4>
+    </div>
+
+    <div style="padding: 1%;"></div>
+    
+    <div class="col text-center">
+        <div class="btn-group-vertical" style="width: 350px;">
+            <button id="but1" type="button" class="btn btn-outline-primary" >Rest1</button>
+            <button id="but2" type="button" class="btn btn-outline-secondary">Rest2</button>
+            <button id="but3" type="button" class="btn btn-outline-success">Rest3</button>
+            <button id="but4" type="button" class="btn btn-outline-danger">Rest4</button>
+            <button id="but5" type="button" class="btn btn-outline-warning">Rest5</button>
+          </div>
+      </div>
+
+    <script>
+    var resturants = [
+            "Chipotle", 
+            "Willy's",
+            "Taco Bell",
+            "Olive Garden",
+            "Panera Bread",
+            "Carrabas",
+            "Macroni Grill",
+            "Fresh to Go",
+            "Pinch of Spice",
+            "Chick-Fil-A",
+            "Zaxby's",
+            "Arby's",
+            "McDonalds", 
+        ]
+
+        object.addEventListener("load", choose);
+
+        function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }   
+        function choose() {
+            rests = shuffle(resturants)
+            document.getElementById("but1").innerHTML = resturants[0];
+            document.getElementById("but2").innerHTML = resturants[1];
+            document.getElementById("but3").innerHTML = resturants[2];
+            document.getElementById("but4").innerHTML = resturants[3];
+            document.getElementById("but5").innerHTML = resturants[4];
+        }
+    </script>
+</body>
+
+<div style="padding: 10%;"></div>
+<footer class="py-3 bg-grey">
+    <p class="m-0 text-dark text-center ">Copyright &copy; Arya Mevada</p>
+</footer>
+</html>
+

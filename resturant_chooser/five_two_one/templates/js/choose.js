@@ -9,7 +9,9 @@ var resturants = [
     "Fresh to Go",
     "Pinch of Spice",
     "Chick-Fil-A",
-    "Zaxby's"
+    "Zaxby's",
+    "Arby's",
+    "McDonalds", 
 ]
 
 object.addEventListener("load", choose);
@@ -30,10 +32,10 @@ function shuffle(array) {
     return array;
 }   
 function choose() {
-    rests = shuffle(resturants)
-    document.getElementById("rest1").innerHTML = resturants[0];
-    document.getElementById("rest2").innerHTML = resturants[1];
-    document.getElementById("rest3").innerHTML = resturants[2];
-    document.getElementById("rest4").innerHTML = resturants[3];
-    document.getElementById("rest5").innerHTML = resturants[4];
+    resturants = shuffle(resturants)
+    document.getElementById("but1").innerHTML = resturants[0];
+    document.getElementById("but2").innerHTML = resturants[1];
+    document.getElementById("but3").innerHTML = resturants[2];
+    document.getElementById("but4").innerHTML = resturants[3];
+    document.getElementById("but5").innerHTML = resturants[4];
 }

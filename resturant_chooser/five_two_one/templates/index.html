@@ -16,8 +16,8 @@
     <div class="navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="{% url 'five_two_one' %}"">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Totally Random</a>
-        <a class="nav-item nav-link" href="#">Play the Game</a>
+        <a class="nav-item nav-link" href="#">Fast Food</a>
+        <a class="nav-item nav-link" href="#">Near me</a>
         <a class="nav-item nav-link" href="#">About us</a>
       </div>
     </div>
@@ -33,18 +33,17 @@
     
     <div class="col text-center">
         <div class="btn-group-vertical" style="width: 350px;">
-            <button id="but1" type="button" class="btn btn-outline-primary" >Rest1</button>
-            <button id="but2" type="button" class="btn btn-outline-secondary">Rest2</button>
-            <button id="but3" type="button" class="btn btn-outline-success">Rest3</button>
-            <button id="but4" type="button" class="btn btn-outline-danger">Rest4</button>
-            <button id="but5" type="button" class="btn btn-outline-warning">Rest5</button>
+            <button id="but1" type="button" class="btn btn-outline-primary"></button>
+            <button id="but2" type="button" class="btn btn-outline-secondary"></button>
+            <button id="but3" type="button" class="btn btn-outline-success"></button>
+            <button id="but4" type="button" class="btn btn-outline-danger"></button>
+            <button id="but5" type="button" class="btn btn-outline-warning"></button>
           </div>
       </div>
 
       <div class=container>
-        <h4 style="text-align: center;">Choose 2 of the 5 Options</h4>
+        <h4 style="text-align: center; padding: 2%;">Choose 2 of the 5 Options</h4>
       </div>
-
     <script>
     var resturants = [
             "Chipotle", 
@@ -80,14 +79,59 @@
             return array;
         }   
         function choose() {
-            rests = shuffle(resturants)
+            resturants = shuffle(resturants)
             document.getElementById("but1").innerHTML = resturants[0];
             document.getElementById("but2").innerHTML = resturants[1];
             document.getElementById("but3").innerHTML = resturants[2];
             document.getElementById("but4").innerHTML = resturants[3];
             document.getElementById("but5").innerHTML = resturants[4];
         }
-    </script>
+     </script>
+     <script>
+       let but1 = document.getElementById("but1");
+       let but2 = document.getElementById("but2");
+       let but3 = document.getElementById("but3");
+       let but4 = document.getElementById("but4");
+       let but5 = document.getElementById("but5");
+
+       var clicks = 0
+       
+       but1.addEventListener("click", function() {
+          if (clicks < 2) {
+            but1.style.background = 'blue';
+            but1.style.color = 'white'
+            clicks = clicks + 1;
+          } 
+       });
+       but2.addEventListener("click", function() {
+        if (clicks < 2) {
+            but2.style.background = 'gray';
+            but2.style.color = 'white'
+            clicks = clicks + 1;
+          } 
+       });
+       but3.addEventListener("click", function() {
+        if (clicks < 2) {
+            but3.style.background = 'green';
+            but3.style.color = 'white'
+            clicks = clicks + 1;
+          } 
+       });
+       but4.addEventListener("click", function() {
+        if (clicks < 2) {
+            but4.style.background = 'red';
+            but4.style.color = 'white'
+            clicks = clicks + 1;
+          } 
+       });
+       but5.addEventListener("click", function() {
+        if (clicks < 2) {
+            but5.style.background = 'yellow';
+            but5.style.color = 'white'
+            clicks = clicks + 1;
+          } 
+       });
+     </script>
 </body>
 
 <div style="padding: 10%;"></div>

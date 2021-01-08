@@ -5,7 +5,7 @@ let but4 = document.getElementById("but4");
 let but5 = document.getElementById("but5");
 let submit = document.getElementById("submit");
 let start_over = document.getElementById("start_over");
-let final_choice_text = document.getElementById("final_choice");
+let choice_text = document.getElementById("choice_prompt");
 
 var choices = []
 var clicks = 0
@@ -64,13 +64,14 @@ if (clicks < 2 && !has_clicked[4]) {
 submit.addEventListener("click", function() {
 var random_idx = Math.floor(Math.random() * choices.length)
 if (clicks >= 2) {
-    final_choice_text.innerHTML = "Tonight's Place to Eat: " + choices[random_idx];
+    choice_text.innerHTML = "Tonight's Place to Eat: " + choices[random_idx];
+
 }
-else if (clicks == 1) {
-    final_choice_text.innerHTML = "Choose 2 resturants!";
+else if (clicks == 0) {
+    choice_text.innerHTML = "Choose 2 resturants!";
 }
 else {
-    final_choice_text.innerHTML = "Choose 1 more resturant!";
+    choice_text.innerHTML = "Choose 1 more resturant!";
 }
 });
 

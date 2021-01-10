@@ -1,17 +1,19 @@
+FLAGS = python3 manage.py
+
 runserver:
-	python3 manage.py runserver
+	$(FLAGS) runserver
 
-collect_static:
-	python3 manage.py collectstatic
+collectstatic:
+	$(FLAGS) collectstatic
 
-make_migrations:
-	python3 manage.py makemigrations
+makemigrations:
+	$(FLAGS) makemigrations
 
 migrate:
-	python3 manage.py migrate
+	$(FLAGS) migrate
 
 test:
-	python3 manage.py test
+	$(FLAGS) test
 
 all:
-	python3 manage.py runserver
+	$(FLAGS) runserver

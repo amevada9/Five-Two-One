@@ -5,6 +5,7 @@
 <head>
     <title>Five Two One</title>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/ico" sizes="32x32" href="favicon/favicon.ico">
 </head>
 
 <!---Navigation Bar -->
@@ -44,17 +45,16 @@
       <div class="col text-center" style='padding: 2%'>
         <button id="submit" type="button" class="btn btn-info">Submit</button>
         <button id="start_over" type="button" class="btn btn-light">Start Over</button>
+        <button id="choose_again" type="button" class="btn btn-dark">Choose Again</button>
       </div>
 
       <div class=container>
         <h4 id="choice_prompt" style="text-align: center;">Choose 2 of the 5 Options</h4>
-      </div>
-
       <h4 id="final_choice" style="text-align: center; padding: 2%;"></h4>
+      </div>
 
       <script type="text/javascript" src="{% static 'js/choose.js' %}"></script>
       <script type="text/javascript" src="{% static 'js/button_handler.js' %}"></script>
-    
 </body>
 
 <div style="padding: 10%;"></div>

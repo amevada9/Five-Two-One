@@ -7,11 +7,16 @@ var resturants = [
     "Carrabas",
     "Macroni Grill",
     "Fresh to Go",
-    "Pinch of Spice",
     "Chick-Fil-A",
     "Zaxby's",
     "Arby's",
-    "McDonalds", 
+    "McDonalds",
+    "Dominos",
+    "Pizza Hut",
+    "Subway",
+    "KFC",
+    "Whataburger",
+    "In-N-Out Burger"
 ]
 
 object.addEventListener("load", choose);

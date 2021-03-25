@@ -1,11 +1,11 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Five Two One</title>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" type="image/ico" sizes="32x32" href="favicon/favicon.ico">
+    <link rel="shortcut icon" href="{{ url_for('static', filename ='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename ='favicon.ico') }}" type="image/x-icon">
 </head>
 
 <!---Navigation Bar -->
@@ -16,9 +16,9 @@
     </button>
     <div class="navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="{% url 'five_two_one' %}">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="{% url 'five_two_one' %}">Fast Food</a>
-        <a class="nav-item nav-link" href="{% url 'location_chooser' %}">Near me</a>
+        <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Fast Food</a>
+        <a class="nav-item nav-link" href="#">Near me</a>
         <a class="nav-item nav-link" href="#">About us</a>
       </div>
     </div>
@@ -53,8 +53,8 @@
       <h4 id="final_choice" style="text-align: center; padding: 2%;"></h4>
       </div>
 
-      <script type="text/javascript" src="{% static 'js/choose.js' %}"></script>
-      <script type="text/javascript" src="{% static 'js/button_handler.js' %}"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='js/choose.js')}}"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='js/button_handler.js')}}"></script>
 </body>
 
 <div style="padding: 10%;"></div>

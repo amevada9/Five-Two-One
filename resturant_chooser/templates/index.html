@@ -18,7 +18,7 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="#">Fast Food</a>
-        <a class="nav-item nav-link" href="#">Near me</a>
+        <a class="nav-item nav-link" href="{{ url_for('location_based') }}">Near me</a>
         <a class="nav-item nav-link" href="#">About us</a>
       </div>
     </div>
@@ -34,11 +34,11 @@
     
     <div class="col text-center">
         <div class="btn-group-vertical" style="width: 350px;">
-            <button id="but1" type="button" class="btn btn-outline-primary"></button>
-            <button id="but2" type="button" class="btn btn-outline-secondary"></button>
-            <button id="but3" type="button" class="btn btn-outline-success"></button>
-            <button id="but4" type="button" class="btn btn-outline-danger"></button>
-            <button id="but5" type="button" class="btn btn-outline-warning"></button>
+            <button id="but1" type="button" class="btn btn-outline-primary">{{ rest1 }}</button>
+            <button id="but2" type="button" class="btn btn-outline-secondary">{{ rest2 }}</button>
+            <button id="but3" type="button" class="btn btn-outline-success">{{ rest3 }}</button>
+            <button id="but4" type="button" class="btn btn-outline-danger">{{ rest4 }}</button>
+            <button id="but5" type="button" class="btn btn-outline-warning">{{ rest5 }}</button>
           </div>
       </div>
 
@@ -53,13 +53,13 @@
       <h4 id="final_choice" style="text-align: center; padding: 2%;"></h4>
       </div>
 
-      <script type="text/javascript" src="{{url_for('static', filename='js/choose.js')}}"></script>
+      <!-- <script type="text/javascript" src="{{url_for('static', filename='js/choose.js')}}"></script> -->
       <script type="text/javascript" src="{{url_for('static', filename='js/button_handler.js')}}"></script>
 </body>
 
 <div style="padding: 10%;"></div>
 <footer class="py-3 bg-dark">
-    <p class="m-0 text-light text-center ">Copyright &copy; Arya Mevada</p>
+    <p class="m-0 text-light text-center ">Copyright &copy; Arya Mevada and Mohini Misra</p>
 </footer>
 </html>
 

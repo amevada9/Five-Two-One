@@ -1,24 +1,3 @@
-var resturants = [
-    "Chipotle", 
-    "Willy's",
-    "Taco Bell",
-    "Olive Garden",
-    "Panera Bread",
-    "Carrabas",
-    "Macroni Grill",
-    "Fresh to Go",
-    "Chick-Fil-A",
-    "Zaxby's",
-    "Arby's",
-    "McDonalds",
-    "Dominos",
-    "Pizza Hut",
-    "Subway",
-    "KFC",
-    "Whataburger",
-    "In-N-Out Burger"
-]
-
 object.addEventListener("load", choose);
 
 function shuffle(array) {
@@ -37,6 +16,26 @@ function shuffle(array) {
     return array;
 }   
 function choose() {
+    var resturants = [
+        "Chipotle",
+        "Willy's",
+        "Taco Bell",
+        "Olive Garden",
+        "Panera Bread",
+        "Carrabas",
+        "Macroni Grill",
+        "Fresh to Go",
+        "Chick-Fil-A",
+        "Zaxby's",
+        "Arby's",
+        "McDonalds",
+        "Dominos",
+        "Pizza Hut",
+        "Subway",
+        "KFC",
+        "Whataburger",
+        "In-N-Out Burger"
+    ]
     resturants = shuffle(resturants)
     document.getElementById("but1").innerHTML = resturants[0];
     document.getElementById("but2").innerHTML = resturants[1];

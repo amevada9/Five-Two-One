@@ -138,3 +138,5 @@ dmypy.json
 cython_debug/
 # Keep secret key out
 etc/
+
+resturant_chooser/handlers/api_key.txt

@@ -1,9 +1,24 @@
+import random
+import googlemaps
+import pprint
+import time
+import geocoder
+
+
+def get_key():
+    with open('./api_key.txt') as f:
+        key = f.readline()
+        print(key)
+        return key
+
+
+
 def pick_five():
     # from GoogleMapsAPIKey import get_my_key # should implement this again 
 
     # food types in Places API: bakery, bar, cafe, meal_delivery, meal_takeaway, restaurant
 
-    API_KEY = 'AIzaSyAthdZ4vpbtc6o_Gbqa2tc4l4AuwxisDns' #get_my_key()
+    API_KEY = '' #get_my_key()
 
     # getting current location 
     curr_loc= geocoder.ip('me').latlng

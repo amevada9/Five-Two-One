@@ -6,6 +6,9 @@ import geocoder
 
 
 def get_key():
+    '''
+    Need to fix this function and ensure that we can read the key, or keep it hidden somehow
+    '''
     with open('./api_key.txt') as f:
         key = f.readline()
         print(key)
